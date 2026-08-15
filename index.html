@@ -297,20 +297,38 @@
 <link rel="canonical" href="./">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "東京リフォーム 杉並店", "address": {"@type": "PostalAddress", "streetAddress": "日本、〒168-0074 東京都杉並区上高井戸１丁目４−２ ライオンズマンション八幡山 508"}, "telephone": "03-6379-9583"}</script>
 <style>
-.vbar{position:relative;z-index:10000;background:#1c1c1c;color:#fff;
-  padding:12px 0;font-size:13px;line-height:1.7;font-family:sans-serif}
-.vbar .wrap{max-width:1080px;margin:0 auto;padding:0 20px;
-  display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
-.vbar__note{opacity:.75;flex:1 1 260px;min-width:0}
-.vbar__list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.vbar__link{display:inline-block;color:#fff;text-decoration:none;
-  padding:6px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
-.vbar__link[aria-current]{background:#fff;color:#1c1c1c;font-weight:700;box-shadow:none}
+nav.vbar{position:relative !important;z-index:10000 !important;display:block !important;
+  background:#1c1c1c !important;color:#fff !important;margin:0 !important;
+  padding:12px 0 !important;font-size:13px !important;line-height:1.7 !important;
+  font-family:sans-serif !important;max-width:none !important;
+  opacity:1 !important;visibility:visible !important;transform:none !important}
+nav.vbar .vbar__inner{max-width:1080px !important;margin:0 auto !important;
+  padding:0 20px !important;display:flex !important;flex-wrap:wrap !important;
+  gap:10px 18px !important;align-items:center !important;width:auto !important}
+nav.vbar .vbar__note{opacity:.75 !important;flex:1 1 260px !important;
+  min-width:0 !important;color:#fff !important}
+nav.vbar .vbar__list{display:flex !important;flex-wrap:wrap !important;gap:8px !important;
+  list-style:none !important;margin:0 !important;padding:0 !important}
+nav.vbar .vbar__list li{display:block !important;margin:0 !important;padding:0 !important;
+  list-style:none !important;width:auto !important}
+nav.vbar .vbar__link{display:inline-block !important;color:#fff !important;
+  text-decoration:none !important;padding:6px 14px !important;font-size:13px !important;
+  border-radius:999px !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4) !important;
+  background:transparent !important;opacity:1 !important;visibility:visible !important;
+  transform:none !important;letter-spacing:normal !important}
+nav.vbar .vbar__link[aria-current]{background:#fff !important;color:#1c1c1c !important;
+  font-weight:700 !important;box-shadow:none !important}
+@media (max-width:520px){
+  nav.vbar{padding:8px 0 !important;font-size:12px !important;line-height:1.5 !important}
+  nav.vbar .vbar__inner{padding:0 14px !important;gap:8px 10px !important}
+  nav.vbar .vbar__link{padding:5px 10px !important;font-size:12px !important}
+}
 #contact{padding:72px 20px}
 #contact .narrow{max-width:560px;margin:0 auto}
 #contact .cta h2{font-size:24px;margin:0 0 12px}
 #contact .cta__body{margin:0 0 24px;line-height:1.9}
 #contact .cta__actions{margin:0 0 28px}
+#contact .hero__actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 #contact .form{display:grid;gap:18px;text-align:left}
 #contact .field{display:grid;gap:8px}
 #contact .field label{font-size:14px;font-weight:700}
@@ -325,6 +343,10 @@
 #contact .ic{flex:none}
 #contact .form__note{font-size:12px;opacity:.7;margin:0}
 #contact .form__done{display:none}
+/* 値の入らなかった任意欄は行ごと畳む（テンプレの「無ければ行ごと削る」の実装。
+   :has() 非対応のブラウザでは従来どおり空欄が残るだけで、悪化はしない） */
+dd:empty{display:none !important}
+div:has(> dd:empty){display:none !important}
 #privacy-policy{padding:56px 20px;font-size:13px;line-height:2}
 #privacy-policy .narrow{max-width:720px;margin:0 auto}
 #privacy-policy h2{font-size:18px;margin:0 0 16px}
@@ -332,7 +354,7 @@
 </style>
 </head>
 <body>
-<nav class="vbar" aria-label="デザイン案の切り替え"><div class="wrap vbar__inner"><span class="vbar__note">エレノアが東京リフォーム 杉並店様へのご提案として作成した見本です。東京リフォーム 杉並店様ご自身が公開されているものではありません。</span><ul class="vbar__list"><li><a class="vbar__link" href="./" aria-current="page">1　誠実な開示</a></li><li><a class="vbar__link" href="2/">2　静謐な空気</a></li><li><a class="vbar__link" href="3/">3　動きで魅せる（リッチプラン専用デザイン）</a></li></ul></div></nav>
+<nav class="vbar" aria-label="デザイン案の切り替え"><div class="wrap vbar__inner"><span class="vbar__note">エレノアが東京リフォーム 杉並店様へのご提案として作成した見本です。東京リフォーム 杉並店様ご自身が公開されているものではありません。</span><ul class="vbar__list"><li><a class="vbar__link" href="./" aria-current="page">1　誠実な開示</a></li><li><a class="vbar__link" href="2/">2　静謐な空気</a></li><li><a class="vbar__link" href="3/">3　作品で選ぶ（リッチプラン専用デザイン）</a></li></ul></div></nav>
 
 <header>
   <span class="brand">
@@ -358,10 +380,10 @@
     <div class="hero__inner">
       <div class="hero__photo ph"><img src="https://images.unsplash.com/photo-1600508772927-723e3ba305c5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8M3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MHx8fDE3ODY3NDI4NTN8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内の空気が分かる写真（人物なしで可）" loading="eager" fetchpriority="high" decoding="async"></div>
       <h1 class="hero__copy">
-        <span class="ln"><span class="np">住み慣れた家を、</span></span><span class="ln"><span class="np">これからも</span><span class="np">心地よく。</span></span><span class="ln"><span class="np">杉並区の</span><span class="np">リフォーム店</span></span>
+        <span class="ln"><span class="np">住まいの</span><span class="np">心配ごとを</span></span><span class="ln"><span class="np">見て、</span><span class="np">聞いて、</span></span><span class="ln"><span class="np">かたちに</span><span class="np">する。</span></span>
       </h1>
       <p class="hero__where">
-        <span class="np">東京都杉並区上高井戸の</span><span class="np">リフォーム会社</span><span class="np">住まいのご相談を承ります</span>
+        <span class="np">杉並区上高井戸の</span><span class="np">リフォーム会社です。</span><span class="np">水まわりから内装まで。</span>
       </p>
       <div class="hero__desk">
         <dl>
@@ -382,115 +404,115 @@
     <div class="band__inner">
       <div class="hd">
         <span class="hd__en">SERVICE</span>
-        <h2><span class="np">リフォームの</span><span class="np">施工内容</span></h2>
+        <h2><span class="np">工事メニューと</span><span class="np">お見積り</span></h2>
       </div>
       <p class="lead">
-        <span class="np">キッチンや浴室などの</span><span class="np">水まわりから、</span><span class="np">内装・外壁まで、</span><span class="np">住まいの</span><span class="np">気になる箇所を</span><span class="np">まとめてご相談いただけます。</span>
+        <span class="np">住まいのお困りごとは</span><span class="np">場所ごとに</span><span class="np">事情が異なります。</span><span class="np">まずは現場を拝見し、</span><span class="np">内容とお見積りを</span><span class="np">ご説明します。</span>
       </p>
 
-      <p class="grp">住まいの中のリフォーム</p>
+      <p class="grp">水まわり</p>
       <ul class="rows">
         <li class="row">
           <span class="row__name">
-            キッチンリフォーム
-            <span class="row__note"><span class="np">コンロや収納の交換から</span><span class="np">配置の見直しまで、</span><span class="np">ご要望に応じて承ります。</span></span>
+            キッチン交換
+            <span class="row__note"><span class="np">流し台や</span><span class="np">コンロまわりの</span><span class="np">入れ替えを行います。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
         <li class="row">
           <span class="row__name">
             浴室リフォーム
-            <span class="row__note"><span class="np">ユニットバスへの交換など、</span><span class="np">お手入れしやすい浴室へ</span><span class="np">ご提案します。</span></span>
+            <span class="row__note"><span class="np">浴槽や</span><span class="np">洗い場の</span><span class="np">張り替え・交換に対応します。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
         <li class="row">
           <span class="row__name">
-            トイレリフォーム
-            <span class="row__note"><span class="np">便器の交換や</span><span class="np">内装の張り替えで、</span><span class="np">清潔感のある空間に整えます。</span></span>
+            洗面台交換
+            <span class="row__note"><span class="np">洗面化粧台の</span><span class="np">入れ替えと</span><span class="np">まわりの内装を整えます。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
         <li class="row">
           <span class="row__name">
-            洗面所リフォーム
-            <span class="row__note"><span class="np">洗面台の交換や収納の見直しで、</span><span class="np">支度のしやすい空間に。</span></span>
+            トイレ交換
+            <span class="row__note"><span class="np">便器の交換と</span><span class="np">床・壁紙の張り替えに対応します。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
         <li class="row">
           <span class="row__name">
-            内装リフォーム
-            <span class="row__note"><span class="np">壁紙や床の張り替えで、</span><span class="np">お部屋の印象を新しくします。</span></span>
+            給湯器交換
+            <span class="row__note"><span class="np">給湯器の取り替えと</span><span class="np">配管まわりの点検を行います。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
         <li class="row">
           <span class="row__name">
-            間取り変更
-            <span class="row__note"><span class="np">暮らしの変化に合わせて、</span><span class="np">間仕切りの変更などを</span><span class="np">ご提案します。</span></span>
+            配管の修理
+            <span class="row__note"><span class="np">水漏れや</span><span class="np">つまりなど</span><span class="np">配管の不具合を調べて直します。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
       </ul>
 
-      <p class="grp">外まわりのリフォーム</p>
+      <p class="grp">内装・外まわり</p>
       <ul class="rows">
         <li class="row">
           <span class="row__name">
-            外壁塗装
-            <span class="row__note"><span class="np">外壁の塗り替えで、</span><span class="np">住まいの外観を</span><span class="np">きれいに整えます。</span></span>
+            クロス張り替え
+            <span class="row__note"><span class="np">お部屋の壁紙や</span><span class="np">天井クロスの</span><span class="np">張り替えを承ります。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
         <li class="row">
           <span class="row__name">
-            屋根リフォーム
-            <span class="row__note"><span class="np">屋根の塗装や葺き替えなど、</span><span class="np">状態に合わせてご提案します。</span></span>
+            床の張り替え
+            <span class="row__note"><span class="np">フローリングや</span><span class="np">クッションフロアの張り替えを行います。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
         <li class="row">
           <span class="row__name">
-            玄関リフォーム
-            <span class="row__note"><span class="np">玄関ドアの交換などで、</span><span class="np">住まいの入り口を整えます。</span></span>
+            外壁・屋根塗装
+            <span class="row__note"><span class="np">外壁や屋根の</span><span class="np">塗り替えと下地の補修を行います。</span></span>
           </span>
-          <span class="row__pr"></span>
+          <span class="row__pr">—</span>
         </li>
       </ul>
 
       
       <div class="honest">
-        <h3><span class="np">小さな修繕も</span><span class="np">ご相談ください</span></h3>
+        <h3><span class="np">お見積りについて</span><span class="np">ご確認ください</span></h3>
         <p class="note-s">
-          <span class="np">リフォームとあわせて、</span><span class="np">下記の工事もご相談いただけます。</span>
+          <span class="np">工事の内容や</span><span class="np">建物の状態によって費用は変わります。</span>
         </p>
         <dl>
           <div>
-            <dt>手すりの取り付け</dt>
-            <dd>お見積りにてご案内</dd>
+            <dt>既存設備の解体・処分</dt>
+            <dd>別途お見積り</dd>
           </div>
           <div>
-            <dt>給湯器の交換</dt>
-            <dd>お見積りにてご案内</dd>
+            <dt>下地の補修</dt>
+            <dd>別途お見積り</dd>
           </div>
           <div>
-            <dt>水栓・蛇口の交換</dt>
-            <dd class="free">お見積りにてご案内</dd>
+            <dt>配管・電気工事</dt>
+            <dd class="free">別途お見積り</dd>
           </div>
           <div>
-            <dt>建具の調整・交換</dt>
-            <dd class="free">お見積りにてご案内</dd>
+            <dt>足場の設置</dt>
+            <dd class="free">別途お見積り</dd>
           </div>
           <div>
-            <dt>網戸の張り替え</dt>
-            <dd class="free">お見積りにてご案内</dd>
+            <dt>設備の入れ替えに伴う内装補修</dt>
+            <dd class="free">別途お見積り</dd>
           </div>
         </dl>
       </div>
 
       <p class="menu-note">
-        <span class="np">料金は工事の内容や</span><span class="np">建物の状態により異なります。</span><span class="np">詳しくは</span><span class="np">お問い合わせください。</span>
+        <span class="np">こちらは工事内容の一覧です。</span><span class="np">費用は現地を確認したうえで</span><span class="np">お見積りとしてご案内します。</span><span class="np">税や支払い方法はお問い合わせください。</span>
       </p>
     </div>
   </section>
@@ -499,61 +521,61 @@
   <section id="beans" class="band">
     <div class="band__inner">
       <div class="hd">
-        <span class="hd__en">MENU</span>
-        <h2><span class="np">主なリフォーム</span><span class="np">メニュー</span></h2>
+        <span class="hd__en">AREA</span>
+        <h2><span class="np">場所ごとの</span><span class="np">リフォーム</span></h2>
       </div>
       <p class="lead">
-        <span class="np">代表的なメニューの一例です。</span><span class="np">料金は建物の状態や</span><span class="np">工事の範囲により変わるため、</span><span class="np">現地を確認のうえ</span><span class="np">個別に</span><span class="np">ご案内しています。</span>
+        <span class="np">同じ工事でも、</span><span class="np">建物の造りや</span><span class="np">傷み具合によって</span><span class="np">できることは変わります。</span><span class="np">気になる場所から</span><span class="np">ご相談ください。</span>
       </p>
       <ul class="beans">
         <li class="bean">
           <span class="bean__no">01</span>
           <span class="bean__body">
-            <span class="bean__name">システムキッチンの交換</span>
-            <span class="bean__meta">キッチン本体の交換・設置</span>
-            <span class="bean__desc"><span class="np">既存キッチンの</span><span class="np">取り外しと、</span><span class="np">新しい機種の設置。</span><span class="np">機種選びからご相談ください。</span></span>
+            <span class="bean__name">キッチン</span>
+            <span class="bean__meta">台所・給排水まわり</span>
+            <span class="bean__desc"><span class="np">流し台や</span><span class="np">コンロ、</span><span class="np">収納の入れ替えと、</span><span class="np">給排水の接続まで行います。</span></span>
           </span>
-          <span class="bean__pr">お見積りにてご案内</span>
+          <span class="bean__pr">お見積り</span>
         </li>
         <li class="bean">
           <span class="bean__no">02</span>
           <span class="bean__body">
-            <span class="bean__name">ユニットバスの交換</span>
-            <span class="bean__meta">浴室全体の入れ替え</span>
-            <span class="bean__desc"><span class="np">古くなった浴室を</span><span class="np">ユニットバスへ。</span><span class="np">お手入れのしやすさも</span><span class="np">考えてご提案します。</span></span>
+            <span class="bean__name">浴室・洗面</span>
+            <span class="bean__meta">水まわり全般</span>
+            <span class="bean__desc"><span class="np">浴槽や洗い場、</span><span class="np">洗面台の交換に加えて、</span><span class="np">床や壁の仕上げも</span><span class="np">あわせて整えます。</span></span>
           </span>
-          <span class="bean__pr">お見積りにてご案内</span>
+          <span class="bean__pr">お見積り</span>
         </li>
         <li class="bean">
           <span class="bean__no">03</span>
           <span class="bean__body">
-            <span class="bean__name">トイレの交換</span>
-            <span class="bean__meta">便器・内装の入れ替え</span>
-            <span class="bean__desc"><span class="np">便器の交換にあわせて、</span><span class="np">壁紙や床の張り替えも</span><span class="np">まとめて承ります。</span></span>
+            <span class="bean__name">トイレ</span>
+            <span class="bean__meta">便器・内装</span>
+            <span class="bean__desc"><span class="np">便器の入れ替えと、</span><span class="np">床材や壁紙の張り替えを</span><span class="np">あわせて承ります。</span></span>
           </span>
-          <span class="bean__pr">お見積りにてご案内</span>
+          <span class="bean__pr">お見積り</span>
         </li>
         <li class="bean">
           <span class="bean__no">04</span>
           <span class="bean__body">
-            <span class="bean__name">内装の張り替え</span>
-            <span class="bean__meta">壁紙・床材の張り替え</span>
-            <span class="bean__desc"><span class="np">お部屋ごとの張り替えから、</span><span class="np">住まい全体まで。</span><span class="np">範囲に応じて</span><span class="np">お見積りします。</span></span>
+            <span class="bean__name">居室・LDK</span>
+            <span class="bean__meta">内装・建具</span>
+            <span class="bean__desc"><span class="np">壁紙や床の張り替え、</span><span class="np">建具の調整まで、</span><span class="np">お部屋の内装を</span><span class="np">まとめて整えます。</span></span>
           </span>
-          <span class="bean__pr">お見積りにてご案内</span>
+          <span class="bean__pr">お見積り</span>
         </li>
         <li class="bean">
           <span class="bean__no">05</span>
           <span class="bean__body">
-            <span class="bean__name">外壁・屋根の塗装</span>
-            <span class="bean__meta">外壁・屋根の塗り替え</span>
-            <span class="bean__desc"><span class="np">色選びや塗料の種類も含めて、</span><span class="np">現地確認のうえ</span><span class="np">ご提案します。</span></span>
+            <span class="bean__name">外壁・屋根</span>
+            <span class="bean__meta">外まわり</span>
+            <span class="bean__desc"><span class="np">外壁や屋根の塗り替え、</span><span class="np">雨どいの補修など、</span><span class="np">外まわりの傷みに対応します。</span></span>
           </span>
-          <span class="bean__pr">お見積りにてご案内</span>
+          <span class="bean__pr">お見積り</span>
         </li>
       </ul>
       <p class="note-s">
-        <span class="np">上記は一例です。</span><span class="np">記載のない工事についても、</span><span class="np">お気軽にお問い合わせください。</span>
+        <span class="np">工事の内容と費用は、</span><span class="np">現地を確認したうえで</span><span class="np">お見積りとしてご案内します。</span>
       </p>
     </div>
   </section>
@@ -570,21 +592,21 @@
           <span class="way__label">お電話でのご相談</span>
           <a class="way__value" href="tel:0300000000">03-6379-9583</a>
           <p class="way__note">
-            <span class="np">お電話は</span><span class="np">毎日9時から18時まで</span><span class="np">受け付けています。</span><span class="np">工事のご相談だけでも構いません。</span>
+            <span class="np">工事中で</span><span class="np">すぐに出られない場合は、</span><span class="np">折り返しご連絡しますので</span><span class="np">お名前をお知らせください。</span>
           </p>
         </div>
         <div class="way">
-          <span class="way__label">メールでのお問い合わせ</span>
-          <a class="btn-key" href="#contact">メールで問い合わせる</a>
+          <span class="way__label">メールでのご相談</span>
+          <a class="btn-key" href="#contact">メールでお問い合わせ</a>
           <p class="way__note">
-            <span class="np">メールは</span><span class="np">いつでも</span><span class="np">お送りいただけます。</span><span class="np">確認のうえ順にお返事いたします。</span>
+            <span class="np">ご住所と</span><span class="np">気になる場所を</span><span class="np">書き添えていただくと、</span><span class="np">ご返信がスムーズです。</span>
           </p>
         </div>
       </div>
       <ul class="promise">
-        <li><span class="np">お問い合わせをいただいても、</span><span class="np">ご契約を</span><span class="np">急がせることは</span><span class="np">ありません。</span><span class="np">気になる点だけのご相談も歓迎です。</span></li>
-        <li><span class="np">お見積りの前に</span><span class="np">現地を確認し、</span><span class="np">工事の内容をご説明したうえで</span><span class="np">進めさせていただきます。</span></li>
-        <li><span class="np">工事の後に気になる点が出た場合も、</span><span class="np">同じ窓口で</span><span class="np">引き続きご相談いただけます。</span></li>
+        <li><span class="np">現地を拝見してから、</span><span class="np">工事の内容と</span><span class="np">費用のお見積りを</span><span class="np">書面でお渡しします。</span><span class="np">ご検討はそのあとで結構です。</span></li>
+        <li><span class="np">ご相談の段階で</span><span class="np">工事をお引き受けするかどうかは</span><span class="np">決まりません。</span><span class="np">お気軽にお問い合わせください。</span></li>
+        <li><span class="np">年中無休で</span><span class="np">9時から18時まで受け付けています。</span><span class="np">お電話が難しい方はメールをどうぞ。</span></li>
       </ul>
     </div>
   </section>
@@ -595,31 +617,31 @@
     <div class="band__inner">
       <div class="hd">
         <span class="hd__en">POLICY</span>
-        <h2><span class="np">大切にしている</span><span class="np">こと</span></h2>
+        <h2><span class="np">私たちの</span><span class="np">考えかた</span></h2>
       </div>
       <p class="lead">
-        <span class="np">リフォームは、</span><span class="np">工事が終わってからの</span><span class="np">暮らしのほうが長い仕事です。</span><span class="np">東京リフォーム 杉並店は、</span><span class="np">杉並区上高井戸で、</span><span class="np">工事の前も後も</span><span class="np">気軽に声をかけていただける</span><span class="np">存在でありたいと考えています。</span>
+        <span class="np">住まいの工事は、</span><span class="np">終わってしまえば</span><span class="np">壁の内側は見えません。</span><span class="np">だからこそ、</span><span class="np">何をどう直すのかを</span><span class="np">先にご説明し、</span><span class="np">ご納得いただいてから</span><span class="np">手を動かすようにしています。</span>
       </p>
       <div class="pledges">
         <div class="pledge">
           <span class="pledge__no">一</span>
-          <h3><span class="np">現地確認のうえで</span><span class="np">ご提案</span></h3>
-          <p><span class="np">住まいの状態を確認してから、</span><span class="np">工事の内容と</span><span class="np">お見積りをご案内します。</span></p>
+          <h3><span class="np">見てから</span><span class="np">お見積り</span></h3>
+          <p><span class="np">現場を確認せずに</span><span class="np">費用をお伝えすることは</span><span class="np">いたしません。</span></p>
         </div>
         <div class="pledge">
           <span class="pledge__no">二</span>
-          <h3><span class="np">わかりやすい</span><span class="np">ご説明</span></h3>
-          <p><span class="np">専門用語をできるだけ使わず、</span><span class="np">工事の内容に</span><span class="np">ご納得いただいてから</span><span class="np">進めます。</span></p>
+          <h3><span class="np">工事の内容を</span><span class="np">書面で</span></h3>
+          <p><span class="np">どこに何をするのかを</span><span class="np">書面にまとめて、</span><span class="np">着工の前に</span><span class="np">ご確認いただきます。</span></p>
         </div>
         <div class="pledge">
           <span class="pledge__no">三</span>
-          <h3><span class="np">地域に根ざした対応</span></h3>
-          <p><span class="np">杉並区上高井戸の店舗として、</span><span class="np">ご近所の住まいの困りごとに</span><span class="np">身近な立場で</span><span class="np">対応します。</span></p>
+          <h3><span class="np">ご近所へのごあいさつ</span></h3>
+          <p><span class="np">工事の前に</span><span class="np">近隣の方へ</span><span class="np">日程をお伝えし、</span><span class="np">音や車の出入りに配慮します。</span></p>
         </div>
         <div class="pledge">
           <span class="pledge__no">四</span>
-          <h3><span class="np">工事後の</span><span class="np">ご相談窓口</span></h3>
-          <p><span class="np">お引き渡しの後も、</span><span class="np">気になる点は</span><span class="np">同じ窓口へご相談いただけます。</span></p>
+          <h3><span class="np">工事のあとも</span><span class="np">ご相談を</span></h3>
+          <p><span class="np">お引き渡しのあとに</span><span class="np">気になる点があれば</span><span class="np">お電話でお知らせください。</span></p>
         </div>
       </div>
       <div class="strip">
@@ -634,15 +656,15 @@
   <section id="person" class="band">
     <div class="band__inner">
       <div class="hd">
-        <span class="hd__en">ABOUT</span>
-        <h2><span class="np">私たちについて</span></h2>
+        <span class="hd__en">SHOP</span>
+        <h2><span class="np">店舗のご案内</span></h2>
       </div>
       <div class="person">
         <div class="person__photo ph"><img src="https://images.unsplash.com/photo-1679055988123-ed4333b54ce8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8M3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMHBvcnRyYWl0fGVufDF8MXx8fDE3ODY3NDI4NTZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店主（作業中の横顔で可）" loading="lazy" decoding="async"></div>
         <div class="person__body">
           <p class="person__name">
-            スタッフ一同
-            <span class="person__role">東京リフォーム 杉並店</span>
+            東京リフォーム 杉並店
+            <span class="person__role">スタッフ一同</span>
           </p>
           <dl>
             <div>
@@ -650,24 +672,24 @@
               <dd><span class="np">東京リフォーム</span><span class="np">杉並店</span></dd>
             </div>
             <div>
-              <dt>事業内容</dt>
-              <dd><span class="np">住まいの</span><span class="np">リフォームの</span><span class="np">ご相談・施工</span></dd>
-            </div>
-            <div>
               <dt>所在地</dt>
-              <dd><span class="np">東京都杉並区</span><span class="np">上高井戸</span></dd>
+              <dd><span class="np">東京都</span><span class="np">杉並区</span><span class="np">上高井戸</span></dd>
             </div>
             <div>
               <dt>営業時間</dt>
-              <dd><span class="np">月曜日から日曜日</span><span class="np">9時00分から</span><span class="np">18時00分まで</span></dd>
+              <dd><span class="np">毎日</span><span class="np">9時から18時まで</span></dd>
             </div>
             <div>
-              <dt>料金について</dt>
-              <dd><span class="np">工事の内容により異なるため、</span><span class="np">現地を確認のうえ</span><span class="np">お見積りをご案内します。</span></dd>
+              <dt>定休日</dt>
+              <dd><span class="np">月曜日から日曜日まで</span><span class="np">毎日</span><span class="np">営業しています。</span></dd>
             </div>
             <div>
-              <dt>お問い合わせ</dt>
-              <dd><span class="np">お電話・メールで</span><span class="np">受け付けています。</span></dd>
+              <dt>事業内容</dt>
+              <dd><span class="np">住宅リフォーム</span><span class="np">水まわり・内装</span><span class="np">外壁・屋根の工事</span></dd>
+            </div>
+            <div>
+              <dt>ご連絡方法</dt>
+              <dd><span class="np">お電話</span><span class="np">またはメール</span></dd>
             </div>
           </dl>
         </div>
@@ -680,7 +702,7 @@
     <div class="band__inner">
       <div class="hd">
         <span class="hd__en">ACCESS</span>
-        <h2><span class="np">店舗への</span><span class="np">アクセス</span></h2>
+        <h2><span class="np">ご来店・</span><span class="np">アクセス</span></h2>
       </div>
       <div class="access">
         <div class="access__body">
@@ -688,13 +710,13 @@
             <div><dt>住所</dt><dd>東京都杉並区上高井戸１丁目４−２ ライオンズマンション八幡山 508</dd></div>
             <div><dt>電話</dt><dd>03-6379-9583</dd></div>
             <div><dt>営業時間</dt><dd>9:00〜18:00</dd></div>
-            <div><dt>定休日</dt><dd>9:00〜18:00</dd></div>
-            <div><dt>最寄り</dt><dd></dd></div>
-            <div><dt>席数</dt><dd>店舗：東京都杉並区上高井戸</dd></div>
-            <div><dt>そのほか</dt><dd><span class="np">ご来店の際は</span><span class="np">地図をご確認ください。</span><span class="np">営業時間は</span><span class="np">毎日9時から18時までです。</span><span class="np">ご来店前にご連絡いただけますと確実です。</span></dd></div>
+            <div><dt>定休日</dt><dd>—</dd></div>
+            <div><dt>最寄り</dt><dd>—</dd></div>
+            <div><dt>席数</dt><dd>東京都杉並区上高井戸</dd></div>
+            <div><dt>そのほか</dt><dd><span class="np">ご来店の際は</span><span class="np">あらかじめお電話ください。</span><span class="np">駐車場の有無や</span><span class="np">詳しい道順は</span><span class="np">お問い合わせ時にご案内します。</span></dd></div>
           </dl>
         </div>
-        <div class="ph"></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1780643800406-2ae71a32916c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMHN0b3JlZnJvbnQlMjBleHRlcmlvcnxlbnwxfDB8fHwxNzg2NzY5MTQxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="外観" loading="lazy" decoding="async"></div>
       </div>
     </div>
   </section>
@@ -727,7 +749,7 @@
 
 <script>
 </script>
-<p class="photo-credit" style="font-size:11px;text-align:center;padding:12px 16px;margin:0">Photo by <a href="https://unsplash.com/@myhq?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">myHQ Workspaces</a>、<a href="https://unsplash.com/@framesforyourheart?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Frames For Your Heart</a>、<a href="https://unsplash.com/@luaybarani?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Luay Barani</a>、<a href="https://unsplash.com/@mohalotfi?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Mohammad Lotfian</a>、<a href="https://unsplash.com/@khodzinskyi?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Vitalii Khodzinskyi</a> on <a href="https://unsplash.com/?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+<p class="photo-credit" style="font-size:11px;text-align:center;padding:12px 16px;margin:0">Photo by <a href="https://unsplash.com/@myhq?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">myHQ Workspaces</a>、<a href="https://unsplash.com/@framesforyourheart?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Frames For Your Heart</a>、<a href="https://unsplash.com/@luaybarani?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Luay Barani</a>、<a href="https://unsplash.com/@mohalotfi?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Mohammad Lotfian</a>、<a href="https://unsplash.com/@khodzinskyi?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Vitalii Khodzinskyi</a>、<a href="https://unsplash.com/@alamanga?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Yanhao Fang</a> on <a href="https://unsplash.com/?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
 <section id="privacy-policy" class="legal">
   <div class="narrow">
     <h2>プライバシーポリシー</h2>
@@ -746,5 +768,44 @@
   <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookie_ok','1')" style="margin-left:16px;background:#3498db;color:#fff;border:none;padding:6px 16px;cursor:pointer;border-radius:4px;">同意する</button>
 </div>
 <script>if(!localStorage.getItem('cookie_ok'))document.getElementById('cookie-banner').style.display='block';</script>
+<script data-vbar-offset>
+(function(){
+  var bar = document.querySelector('nav.vbar');
+  if (!bar) return;
+  var pinned = [];
+  var scan = function(){
+    pinned = [];
+    var all = document.body.querySelectorAll('*');
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      if (el === bar || bar.contains(el)) continue;
+      var cs = getComputedStyle(el);
+      if (cs.position !== 'fixed') continue;
+      /* 元の top は一度だけ測って覚える。再スキャンで**自分が書いた値**を
+         読むと「top が 60 を超えたから対象外」と判定してしまい、
+         下げたきり追随が止まる（2026-08-15 実測） */
+      var top = el.__vbarTop;
+      if (top === undefined) {
+        top = parseFloat(cs.top);
+        if (isNaN(top) || top > 60) continue;
+        el.__vbarTop = top;
+      }
+      if (el.getBoundingClientRect().height >= innerHeight * 0.9) continue;
+      pinned.push({el: el, top: top});
+    }
+  };
+  var sync = function(){
+    var d = Math.max(0, bar.getBoundingClientRect().bottom);
+    for (var i = 0; i < pinned.length; i++) {
+      pinned[i].el.style.top = (pinned[i].top + d) + 'px';
+    }
+  };
+  var refresh = function(){ scan(); sync(); };
+  addEventListener('scroll', sync, {passive: true});
+  addEventListener('resize', refresh);
+  addEventListener('load', refresh);
+  refresh();
+})();
+</script>
 </body>
 </html>
