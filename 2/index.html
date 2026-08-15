@@ -228,20 +228,38 @@
 <link rel="canonical" href="./">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "東京リフォーム 杉並店", "address": {"@type": "PostalAddress", "streetAddress": "日本、〒168-0074 東京都杉並区上高井戸１丁目４−２ ライオンズマンション八幡山 508"}, "telephone": "03-6379-9583"}</script>
 <style>
-.vbar{position:relative;z-index:10000;background:#1c1c1c;color:#fff;
-  padding:12px 0;font-size:13px;line-height:1.7;font-family:sans-serif}
-.vbar .wrap{max-width:1080px;margin:0 auto;padding:0 20px;
-  display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
-.vbar__note{opacity:.75;flex:1 1 260px;min-width:0}
-.vbar__list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.vbar__link{display:inline-block;color:#fff;text-decoration:none;
-  padding:6px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
-.vbar__link[aria-current]{background:#fff;color:#1c1c1c;font-weight:700;box-shadow:none}
+nav.vbar{position:relative !important;z-index:10000 !important;display:block !important;
+  background:#1c1c1c !important;color:#fff !important;margin:0 !important;
+  padding:12px 0 !important;font-size:13px !important;line-height:1.7 !important;
+  font-family:sans-serif !important;max-width:none !important;
+  opacity:1 !important;visibility:visible !important;transform:none !important}
+nav.vbar .vbar__inner{max-width:1080px !important;margin:0 auto !important;
+  padding:0 20px !important;display:flex !important;flex-wrap:wrap !important;
+  gap:10px 18px !important;align-items:center !important;width:auto !important}
+nav.vbar .vbar__note{opacity:.75 !important;flex:1 1 260px !important;
+  min-width:0 !important;color:#fff !important}
+nav.vbar .vbar__list{display:flex !important;flex-wrap:wrap !important;gap:8px !important;
+  list-style:none !important;margin:0 !important;padding:0 !important}
+nav.vbar .vbar__list li{display:block !important;margin:0 !important;padding:0 !important;
+  list-style:none !important;width:auto !important}
+nav.vbar .vbar__link{display:inline-block !important;color:#fff !important;
+  text-decoration:none !important;padding:6px 14px !important;font-size:13px !important;
+  border-radius:999px !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4) !important;
+  background:transparent !important;opacity:1 !important;visibility:visible !important;
+  transform:none !important;letter-spacing:normal !important}
+nav.vbar .vbar__link[aria-current]{background:#fff !important;color:#1c1c1c !important;
+  font-weight:700 !important;box-shadow:none !important}
+@media (max-width:520px){
+  nav.vbar{padding:8px 0 !important;font-size:12px !important;line-height:1.5 !important}
+  nav.vbar .vbar__inner{padding:0 14px !important;gap:8px 10px !important}
+  nav.vbar .vbar__link{padding:5px 10px !important;font-size:12px !important}
+}
 #contact{padding:72px 20px}
 #contact .narrow{max-width:560px;margin:0 auto}
 #contact .cta h2{font-size:24px;margin:0 0 12px}
 #contact .cta__body{margin:0 0 24px;line-height:1.9}
 #contact .cta__actions{margin:0 0 28px}
+#contact .hero__actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 #contact .form{display:grid;gap:18px;text-align:left}
 #contact .field{display:grid;gap:8px}
 #contact .field label{font-size:14px;font-weight:700}
@@ -256,6 +274,10 @@
 #contact .ic{flex:none}
 #contact .form__note{font-size:12px;opacity:.7;margin:0}
 #contact .form__done{display:none}
+/* 値の入らなかった任意欄は行ごと畳む（テンプレの「無ければ行ごと削る」の実装。
+   :has() 非対応のブラウザでは従来どおり空欄が残るだけで、悪化はしない） */
+dd:empty{display:none !important}
+div:has(> dd:empty){display:none !important}
 #privacy-policy{padding:56px 20px;font-size:13px;line-height:2}
 #privacy-policy .narrow{max-width:720px;margin:0 auto}
 #privacy-policy h2{font-size:18px;margin:0 0 16px}
@@ -263,11 +285,11 @@
 </style>
 </head>
 <body>
-<nav class="vbar" aria-label="デザイン案の切り替え"><div class="wrap vbar__inner"><span class="vbar__note">エレノアが東京リフォーム 杉並店様へのご提案として作成した見本です。東京リフォーム 杉並店様ご自身が公開されているものではありません。</span><ul class="vbar__list"><li><a class="vbar__link" href="../">1　誠実な開示</a></li><li><a class="vbar__link" href="./" aria-current="page">2　静謐な空気</a></li><li><a class="vbar__link" href="../3/">3　動きで魅せる（リッチプラン専用デザイン）</a></li></ul></div></nav>
+<nav class="vbar" aria-label="デザイン案の切り替え"><div class="wrap vbar__inner"><span class="vbar__note">エレノアが東京リフォーム 杉並店様へのご提案として作成した見本です。東京リフォーム 杉並店様ご自身が公開されているものではありません。</span><ul class="vbar__list"><li><a class="vbar__link" href="../">1　誠実な開示</a></li><li><a class="vbar__link" href="./" aria-current="page">2　静謐な空気</a></li><li><a class="vbar__link" href="../3/">3　作品で選ぶ（リッチプラン専用デザイン）</a></li></ul></div></nav>
 
 <header>
   <span class="brand">
-    TOKYO REFORM SUGINAMI
+    Tokyo Reform Suginami
   </span>
   <nav>
     <a href="#about">ABOUT</a>
@@ -283,9 +305,9 @@
   
   <div class="hero">
     <div class="hero__photo ph">
-      <div class="slide s1"><img src="https://images.unsplash.com/photo-1564909021375-9b66f5731eab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="eager" fetchpriority="high" decoding="async"></div>
-      <div class="slide s2"><img src="https://images.unsplash.com/photo-1587136527307-f53f514267d7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="lazy" decoding="async"></div>
-      <div class="slide s3"><img src="https://images.unsplash.com/photo-1637613345110-823bfaea11fb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8M3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="lazy" decoding="async"></div>
+      <div class="slide s1"><img src="https://images.unsplash.com/photo-1601375476071-8476ef11f19d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8OXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NjkxNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="eager" fetchpriority="high" decoding="async"></div>
+      <div class="slide s2"><img src="https://images.unsplash.com/photo-1633113211800-4acbb59fc254?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MTB8fGJ1c2luZXNzJTIwaW50ZXJpb3IlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzg2NzY5MTQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="lazy" decoding="async"></div>
+      <div class="slide s3"><img src="https://images.unsplash.com/photo-1600499273056-52b8a9f6859f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MTF8fGJ1c2luZXNzJTIwaW50ZXJpb3IlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzg2NzY5MTQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内・光・道具（クロスフェード）" loading="lazy" decoding="async"></div>
     </div>
     <div class="hero__logo">
       <div class="hero__mark">
@@ -304,15 +326,15 @@
       <div class="split__text fade-up">
         <p class="eyebrow">ABOUT</p>
         <h2>
-          住み慣れた家に、<br>新しい景色を。
+          住まいをつくり直す、<br>その手ざわりから。
         </h2>
         <p class="lead">
-          東京リフォーム 杉並店は、東京都杉並区上高井戸のリフォーム会社です。キッチンや浴室などの水まわりから、内装の張り替え、間取りの見直しまで、住まいの困りごとをうかがい、暮らしに合った工事をご提案します。お電話・メールでのご相談を、毎日9時から18時までお受けしています。
+          東京リフォーム 杉並店は、東京都杉並区上高井戸で住まいのリフォームを承っています。キッチンや浴室の設備交換から、内装の張り替え、外壁や屋根の工事まで。暮らしのご不便をうかがい、住まいの状態を見たうえで、ご予算とご希望に合う工事の進め方をご提案します。
         </p>
         <a class="more" href="#salon">VIEW MORE</a>
       </div>
       <div class="split__duo">
-        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1547087200-703f16b29590?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8NHx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内の抜け" loading="lazy" decoding="async"></div>
+        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1717903781891-de75baaa2de6?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MTJ8fGJ1c2luZXNzJTIwaW50ZXJpb3IlMjBpbnRlcmlvcnxlbnwxfDF8fHwxNzg2NzY5MTQyfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="店内の抜け" loading="lazy" decoding="async"></div>
         <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8M3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGhhbmRzJTIwY2xvc2V1cHxlbnwxfDF8fHwxNzg2NzQyODU1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="手元・道具" loading="lazy" decoding="async"></div>
       </div>
     </div>
@@ -324,15 +346,15 @@
       <div class="split__text fade-up">
         <p class="eyebrow">SALON</p>
         <h2>
-          暮らしに合わせて、<br>住まいを整える。
+          暮らしの続きを、<br>整えていく場所。
         </h2>
         <p class="lead">
-          朝の光が入る台所、湯気のこもらない浴室、足ざわりのやわらかな床。リフォームの仕事は、図面よりも先に、そこで続いていく毎日を思い浮かべることから始まります。ご家族の動きや持ち物の量をうかがいながら、使う人の背丈に合った、無理のない空間を一緒に考えます。
+          打ち合わせでは、キッチンや床材、壁紙の見本を手に取りながら、仕上がりのイメージを一緒に確かめていきます。工事の範囲と日程、住まいながらの工事になるかどうかまで、着工前にお伝えします。ご不明な点は、その場で遠慮なくお尋ねください。
         </p>
       </div>
       <div class="split__duo">
-        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1647511685992-546888a63036?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8NXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="セット面" loading="lazy" decoding="async"></div>
-        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1579488081688-3dbbbae7893e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8Nnx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NDI4NTV8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="窓辺・植物" loading="lazy" decoding="async"></div>
+        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1564909021375-9b66f5731eab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NjkxNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="セット面" loading="lazy" decoding="async"></div>
+        <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1587136527307-f53f514267d7?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMGludGVyaW9yfGVufDF8MXx8fDE3ODY3NjkxNDJ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="窓辺・植物" loading="lazy" decoding="async"></div>
       </div>
     </div>
   </section>
@@ -341,15 +363,15 @@
   <section id="menu" class="gap-l">
     <div class="fade-up">
       <p class="eyebrow">MENU</p>
-      <h2>リフォームメニュー</h2>
+      <h2>工事メニュー</h2>
       <ul class="menu-list">
-        <li><span class="nm">キッチンリフォーム</span><span class="dots"></span><span class="pr"></span></li>
-        <li><span class="nm">浴室・洗面リフォーム</span><span class="dots"></span><span class="pr"></span></li>
-        <li><span class="nm">トイレリフォーム</span><span class="dots"></span><span class="pr"></span></li>
-        <li><span class="nm">内装・クロスの張り替え</span><span class="dots"></span><span class="pr"></span></li>
+        <li><span class="nm">キッチンリフォーム</span><span class="dots"></span><span class="pr">—</span></li>
+        <li><span class="nm">浴室・洗面リフォーム</span><span class="dots"></span><span class="pr">—</span></li>
+        <li><span class="nm">トイレリフォーム</span><span class="dots"></span><span class="pr">—</span></li>
+        <li><span class="nm">内装リフォーム（壁紙・床材の張り替え）</span><span class="dots"></span><span class="pr">—</span></li>
       </ul>
       <p class="menu-note">
-        費用と工期は、住まいの状況や工事の内容によって異なります。現地を拝見したうえで、お見積もりをご案内いたします。
+        料金は工事の内容・範囲・住まいの状態によって異なります。現地を確認のうえ、お見積りをお出しします。工期の目安も、お見積りとあわせてお伝えします。
       </p>
     </div>
   </section>
@@ -358,12 +380,12 @@
   <section class="oneday">
     <div class="oneday__circle fade-up">
       <p class="eyebrow">ONE DAY</p>
-      <h2>上高井戸の一日</h2>
+      <h2>杉並区上高井戸から、一日がはじまる</h2>
       <p>
-        朝9時、道具を積んだ車が上高井戸を出ます。採寸と打ち合わせ、養生、施工。夕方18時まで、杉並のどこかの住まいで、その日の仕事をひとつずつ納めていきます。ご相談は月曜から日曜まで承ります。
+        朝九時、事務所を出て、その日の現場へ向かいます。設備の入れ替え、壁紙の張り替え、着工前の下見。夕方六時まで、上高井戸を拠点に杉並のお住まいをまわっています。年中無休で承っています。
       </p>
     </div>
-    <div class="oneday__bg ph"><img src="https://images.unsplash.com/photo-1780643800406-2ae71a32916c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8MXx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMHN0b3JlZnJvbnQlMjBleHRlcmlvcnxlbnwxfDB8fHwxNzg2NzQyODU0fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="外観 or 店内の引き" loading="lazy" decoding="async"></div>
+    <div class="oneday__bg ph"><img src="https://images.unsplash.com/photo-1785594732247-d874f32fb1f1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBpbnRlcmlvciUyMHN0b3JlZnJvbnQlMjBleHRlcmlvcnxlbnwxfDB8fHwxNzg2NzY5MTQxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="外観 or 店内の引き" loading="lazy" decoding="async"></div>
   </section>
 
   
@@ -375,11 +397,11 @@
           <div><dt>住所</dt><dd>東京都杉並区上高井戸１丁目４−２ ライオンズマンション八幡山 508</dd></div>
           <div><dt>電話</dt><dd>03-6379-9583</dd></div>
           <div><dt>営業時間</dt><dd>9:00〜18:00</dd></div>
-          <div><dt>定休日</dt><dd>9:00〜18:00</dd></div>
-          <div><dt>アクセス</dt><dd></dd></div>
+          <div><dt>定休日</dt><dd>—</dd></div>
+          <div><dt>アクセス</dt><dd>—</dd></div>
         </dl>
       </div>
-      <div class="ph fade-up"></div>
+      <div class="ph fade-up"><img src="https://images.unsplash.com/photo-1784552914380-f62678966f86?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMDIzODQyfDB8MXxzZWFyY2h8M3x8YnVzaW5lc3MlMjBpbnRlcmlvciUyMHN0b3JlZnJvbnQlMjBleHRlcmlvcnxlbnwxfDB8fHwxNzg2NzY5MTQxfDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="外観" loading="lazy" decoding="async"></div>
     </div>
   </section>
 
@@ -417,7 +439,7 @@
   document.querySelectorAll('.fade-up').forEach(function(el){ io.observe(el); });
 
 </script>
-<p class="photo-credit" style="font-size:11px;text-align:center;padding:12px 16px;margin:0">Photo by <a href="https://unsplash.com/@aranprime?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">aranprime</a>、<a href="https://unsplash.com/@michael_exploring?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Michael Descharles</a>、<a href="https://unsplash.com/@amr_taha?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Amr Taha™</a>、<a href="https://unsplash.com/@kevinwolf?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Kevin Wolf</a>、<a href="https://unsplash.com/@ryanancill?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Ryan Ancill</a>、<a href="https://unsplash.com/@rooke?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Katja Rooke</a>、<a href="https://unsplash.com/@joselosada?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Jose Losada</a>、<a href="https://unsplash.com/@alamanga?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Yanhao Fang</a> on <a href="https://unsplash.com/?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+<p class="photo-credit" style="font-size:11px;text-align:center;padding:12px 16px;margin:0">Photo by <a href="https://unsplash.com/@adrienolichon?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Adrien Olichon</a>、<a href="https://unsplash.com/@surface?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Surface</a>、<a href="https://unsplash.com/@ryunosuke_kikuno?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Ryunosuke Kikuno</a>、<a href="https://unsplash.com/@declansun?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Declan Sun</a>、<a href="https://unsplash.com/@ryanancill?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Ryan Ancill</a>、<a href="https://unsplash.com/@aranprime?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">aranprime</a>、<a href="https://unsplash.com/@michael_exploring?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Michael Descharles</a>、<a href="https://unsplash.com/@smrodriguez?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">SM Rodriguez</a>、<a href="https://unsplash.com/@liliantruong2603?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Trương Tuyết Ly</a> on <a href="https://unsplash.com/?utm_source=Eleanor+LP+Studio&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
 <section id="privacy-policy" class="legal">
   <div class="narrow">
     <h2>プライバシーポリシー</h2>
@@ -436,5 +458,44 @@
   <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookie_ok','1')" style="margin-left:16px;background:#3498db;color:#fff;border:none;padding:6px 16px;cursor:pointer;border-radius:4px;">同意する</button>
 </div>
 <script>if(!localStorage.getItem('cookie_ok'))document.getElementById('cookie-banner').style.display='block';</script>
+<script data-vbar-offset>
+(function(){
+  var bar = document.querySelector('nav.vbar');
+  if (!bar) return;
+  var pinned = [];
+  var scan = function(){
+    pinned = [];
+    var all = document.body.querySelectorAll('*');
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      if (el === bar || bar.contains(el)) continue;
+      var cs = getComputedStyle(el);
+      if (cs.position !== 'fixed') continue;
+      /* 元の top は一度だけ測って覚える。再スキャンで**自分が書いた値**を
+         読むと「top が 60 を超えたから対象外」と判定してしまい、
+         下げたきり追随が止まる（2026-08-15 実測） */
+      var top = el.__vbarTop;
+      if (top === undefined) {
+        top = parseFloat(cs.top);
+        if (isNaN(top) || top > 60) continue;
+        el.__vbarTop = top;
+      }
+      if (el.getBoundingClientRect().height >= innerHeight * 0.9) continue;
+      pinned.push({el: el, top: top});
+    }
+  };
+  var sync = function(){
+    var d = Math.max(0, bar.getBoundingClientRect().bottom);
+    for (var i = 0; i < pinned.length; i++) {
+      pinned[i].el.style.top = (pinned[i].top + d) + 'px';
+    }
+  };
+  var refresh = function(){ scan(); sync(); };
+  addEventListener('scroll', sync, {passive: true});
+  addEventListener('resize', refresh);
+  addEventListener('load', refresh);
+  refresh();
+})();
+</script>
 </body>
 </html>
